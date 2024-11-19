@@ -21,7 +21,8 @@ pnpm-debug.log*
 
 # ignore .astro directory
 .astro
-
+.vscode
+.github
 # yarn
 .yarn/*
 !.yarn/patches
