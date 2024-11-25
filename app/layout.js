@@ -5,8 +5,8 @@ import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "The Bubbly Baker",
-  description: "My amazing recipe app",
+  title: "Mani's Blog",
+  description: "Archive of writings",
 };
 
 export default function RootLayout({ children }) {
@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   let header = (
     <header>
       <Link href={'/'}>
-        <h1>The Bubbly Baker</h1>
+        <h1>Mani's Blog</h1>
       </Link>
     </header>
   )

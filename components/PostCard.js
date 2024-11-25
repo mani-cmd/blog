@@ -2,20 +2,18 @@ import Link from "next/link";
 
 export default function PostCard(props) {
     const { post } = props
+    console.log(post)
     return (
-        <Link className="unstyled" href={`/recipe/${post.slug}`}>
+        <Link className="unstyled" href={`/archive/${post.slug}`}>
             <div className="postCard">
                 <h3>{post.title}</h3>
-                <p>{post.bio}</p>
+                {/* <p>{post.dateAt}</p> */}
                 <div className="statsContainer">
                     <div>
-                        <h5>Prep Time</h5>
-                        <p>{post.prep_time}</p>
+                        <h5>Date:</h5>
+                        <p>{post.date}</p>
                     </div>
-                    <div>
-                        <h5>Cook Time</h5>
-                        <p>{post.cook_time}</p>
-                    </div>
+
                 </div>
             </div>
         </Link>

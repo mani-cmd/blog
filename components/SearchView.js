@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import SearchBar from './SearchBar'
+// import SearchBar from './SearchBar'
 import PostCard from './PostCard'
 
 export default function SearchView(props) {
@@ -9,7 +9,7 @@ export default function SearchView(props) {
 
     return (
         <>
-            <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
+            {/* <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} /> */}
             <div className="postsContainer">
                 {postMetadata.filter(val => {
                     return val.title.includes(searchValue)

@@ -10,12 +10,14 @@ export default function getPostMetadata(basePath) {
     const posts = markdownPosts.map((filename) => {
         const fileContents = fs.readFileSync(`${basePath}/${filename}`, 'utf8')
         const matterResult = matter(fileContents)
+        const title = matterResult.data.title
         return {
             title: matterResult.data.title,
-            prep_time: matterResult.data.prep_time,
-            cook_time: matterResult.data.cook_time,
-            bio: matterResult.data.description,
-            slug: filename.replace('.md', '')
+            date: matterResult.data.date,
+            // cook_time: matterResult.data.cook_time,
+            // bio: matterResult.data.description,
+            slug: filename.replace('.md', '') 
+            // slug: (title).toLowercase().replace(" ", "-")
         }
     })
     return posts
