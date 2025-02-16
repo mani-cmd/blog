@@ -1,0 +1,11 @@
+---
+title: "How I wanted to be"
+date: "2025-02-16"
+description: "My poem."
+categories: ["Poetry"]
+tag: ["Nature", "Life", "Inspiration"]
+---
+
+Oh **bold** *italic* ~~strikethrough~~
+
+what 
