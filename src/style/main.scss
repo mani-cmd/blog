@@ -1,0 +1,56 @@
+// File contains general styling and themes and alla that
+
+/*Font imports*/
+@use 'reset';
+@use 'type/monospace';
+@use 'type/serif';
+@use 'type/sans';
+@use 'type/typeStyles';
+@import 'variables';
+
+// Theme Variables
+
+:root, [data-theme="dark"] {
+  /* dark Theme */
+  --bg-color: #1C1B19;
+  --text-color: #D6CBB8;
+
+}
+
+[data-theme="light"] {
+  /* Light Theme */
+  --text-color: #1C1B19;
+  --bg-color: #D6CBB8;
+}
+
+
+[data-theme="light-alt"] {
+  /* Light Theme */
+  --text-color: #3F3A36;
+  --bg-color: #F8F1E7;
+}
+
+[data-theme="dark-alt"] {
+  /* Light Theme */
+--bg-color: #3F3A36;
+  --text-color: #F8F1E7;
+}
+
+*{
+  font-family: $font-primary;
+}
+body{
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+pre {
+  background-color: #1e1e1e;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+}

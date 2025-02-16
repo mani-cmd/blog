@@ -5,14 +5,12 @@
 
 <h2>Main block</h2>
 
-
-<h1>Welcome to My Blog & Poetry Site</h1>
 <!-- Featured Post -->
 {#if data.featuredPost}
   <section class="featured">
-    <h2>Featured Post</h2>
+    <h4>Featured Post</h4>
     <article>
-      <h3>{data.featuredPost.title}</h3>
+      <h6>{data.featuredPost.title}</h6>
       <p>{data.featuredPost.description}</p>
       <small>{data.featuredPost.date}</small>
       <br />
@@ -24,12 +22,12 @@
 
 <!-- Recent Archives -->
 <section>
-  <h2>Recent Archives</h2>
+  <h3>Recent Archives</h3>
   <ul>
     {#each data.recentPosts as post}
       <li>
         <a href={`/archive/${post.slug}`}>
-          <h3>{post.title}</h3>
+          <h4>{post.title}</h4>
           <p>{post.description}</p>
           <small>{post.date}</small>
         </a>
@@ -41,18 +39,18 @@
 
 <!-- Recent Poems -->
 <section>
-  <h2>Recent Poems</h2>
+  <h3>Poems</h3>
   <ul>
     {#each data.recentPoems as poem}
       <li>
         <a href={`/poem/${poem.slug}`}>
-          <h3>{poem.title}</h3>
+          <h4>{poem.title}</h4>
           <small>{poem.date}</small>
         </a>
       </li>
     {/each}
   </ul>
-  <a href="/poem">View all poems →</a>
+  <a href="/poem/">View all poems →</a>
 </section>
 
 
@@ -61,7 +59,7 @@
 <!-- Categories Section -->
 {#if data.categories.length > 0}
   <section>
-    <h2>Categories</h2>
+    <h3>Categories</h3>
     <ul>
       {#each data.categories as category}
         <li>
@@ -72,20 +70,6 @@
   </section>
 {/if}
 
-
-<!-- Tags Section -->
-{#if data.tags.length > 0}
-  <section>
-    <h2>Tags</h2>
-    <ul>
-      {#each data.tags as tag}
-        <li>
-          <a href={`/tag/${tag}`}>#{tag}</a>
-        </li>
-      {/each}
-    </ul>
-  </section>
-{/if}
 
 </section>
 
