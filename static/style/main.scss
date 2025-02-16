@@ -1,4 +1,13 @@
 // File contains general styling and themes and alla that
+
+/*Font imports*/
+@use 'reset';
+@use 'variables';
+@use 'type/monospace';
+@use 'type/serif';
+@use 'type/sans';
+@use 'type/typeStyles';
+
 pre {
   background-color: #1e1e1e;
   padding: 16px;
