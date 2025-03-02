@@ -1,6 +1,7 @@
 ---
 title: "Hello, World!"
-date: "2024-02-16"
+date: "16-02-2025"
+day: "February 10 2024"
 description: "My first blog post using mdsvex."
 featured: true
 categories: ["Development"]

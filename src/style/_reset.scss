@@ -47,5 +47,8 @@ table {
 *,*::before, *::after{
 	box-sizing: inherit;
    	line-height: 100%;
+}
 
+a{
+	cursor: pointer;
 }

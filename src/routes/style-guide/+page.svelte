@@ -10,8 +10,9 @@
     <blockquote>"This is a blockquote example."</blockquote>
     <p class="poem"> Main body    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
 <hr>
-<button>Theme changer button</button>
-<button>alt changer button</button>
+<code>
+    Hello
+</code>
 <hr>
     <strong>Bold Text Example</strong><br>
     <em>Italicized Text Example</em><br>

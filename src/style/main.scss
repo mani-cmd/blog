@@ -2,39 +2,28 @@
 
 /*Font imports*/
 @use 'reset';
+@use 'variables';
+
+$font-primary: 'DM Sans', sans-serif;
+$font-mono: 'DM Mono', monospace;
 @use 'type/monospace';
 @use 'type/serif';
 @use 'type/sans';
 @use 'type/typeStyles';
-@import 'variables';
 
 // Theme Variables
-
-:root, [data-theme="dark"] {
-  /* dark Theme */
-  --bg-color: #1C1B19;
-  --text-color: #D6CBB8;
-
+:root {
+  --bg-color: #1A2A4A;
+  --text-color: #FAF1E6;
+  --accent-color: #A23E48;
 }
 
 [data-theme="light"] {
-  /* Light Theme */
-  --text-color: #1C1B19;
-  --bg-color: #D6CBB8;
+  --bg-color: #FAF1E6;
+  --text-color: #1A2A4A;
+  --accent-color: #8B5E3B;
 }
 
-
-[data-theme="light-alt"] {
-  /* Light Theme */
-  --text-color: #3F3A36;
-  --bg-color: #F8F1E7;
-}
-
-[data-theme="dark-alt"] {
-  /* Light Theme */
---bg-color: #3F3A36;
-  --text-color: #F8F1E7;
-}
 
 *{
   font-family: $font-primary;
@@ -42,6 +31,10 @@
 body{
   background: var(--bg-color);
   color: var(--text-color);
+  max-width: 1024px;
+  margin: 0 auto;
+  transition: 350ms ease-in;
+  transition-property: color, background-color;
 }
 pre {
   background-color: #1e1e1e;
@@ -51,6 +44,5 @@ pre {
 }
 
 code {
-  font-family: 'Fira Code', monospace;
   font-size: 14px;
 }
