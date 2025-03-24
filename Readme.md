@@ -1,1 +1,0 @@
-Blog: https://mani-cmd.github.io/blog
