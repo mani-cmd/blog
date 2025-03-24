@@ -59,5 +59,5 @@ function generateAstroConfigure() {
 export default defineConfig({
   site: 'https://mani-cmd.github.io/blog',
   base: 'https://github.com/mani-cmd/blog',
-  integrations: [react()], 
+  integrations: [react(),sitemap()], 
 });
