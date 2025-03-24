@@ -5,7 +5,7 @@ import { defineConfig } from './src/helpers/config-helper';
 
 export default defineConfig({
   lang: 'en-US',
-  site: 'https://example.com',
+  site: 'https://mani-cmd.github.io/blog',
   avatar: '/avatar.png',
   title: 'Mani\'s Blog',
   description: 'Expression. Thoughts. Tech.',
@@ -17,7 +17,7 @@ export default defineConfig({
   socialLinks: [
     {
       icon: 'github',
-      link: 'https://github.com/SlateDesign/slate-blog'
+      link: 'https://github.com/mani-cmd/blog'
     },
 ]
 });
