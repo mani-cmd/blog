@@ -1,2 +1,115 @@
+@import url('https://api.fontshare.com/v2/css?f[]=sora@400,401,500,501,600,601,700,701,800,801&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@1,9..144,500,50,1&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,700;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@1,9..144,300,50,1&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;1,400&display=swap');
+
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+@theme {
+	--color-gray: #1e1e1c;
+	--color-txt: #eae3d2;
+	--color-txt-alt: #a89f91;
+	--color-accent: #f5963d;
+	--color-line: #a89f91;
+	--font-sora: 'Sora', sans-serif;
+	--font-space-g: 'Space Grotesk', sans-serif;
+	--font-space-mono: 'Space Mono', monospace;
+	/* --font-italic:  */
+}
+
+*,
+*::before,
+*::after {
+	font-optical-sizing: auto;
+}
+
+@utility quote {
+	@apply border-txt-alt relative m-1.5 border px-8 py-4 text-[20px];
+	font-family: 'Fraunces', serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: italic;
+	font-variation-settings:
+		'SOFT' 50,
+		'WONK' 1;
+
+	position: relative;
+	padding: 1.5rem 1rem 1rem 5rem; /* leave room for the icon on the left */
+	margin: 2rem 1px;
+	line-height: 1.6;
+}
+
+h1.title {
+	@apply font-sora text-[72px] leading-18 font-[700];
+}
+h1 {
+	@apply font-sora text-[48px] leading-12;
+}
+h2 {
+	@apply font-sora text-[32px] leading-10 font-[600];
+}
+h3 {
+	@apply font-sora text-[24px] leading-8 font-[600];
+}
+button {
+	@apply text-accent font-sora text-[16px] font-[500] underline decoration-wavy underline-offset-[2px] hover:cursor-pointer hover:underline-offset-[1px];
+}
+button::before {
+	@apply mx-0.5;
+	content: '@';
+}
+button::after {
+	@apply text-accent mx-1;
+	content: '';
+	display: inline-block;
+	width: 3em;
+	height: 1rem;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='13' viewBox='0 0 20 13' fill='none'%3E%3Cpath d='M0.000139952 7.41408L0 5.41418H13.5862V0L20.0004 6.41418L13.5862 12.8284V7.41418L0.000139952 7.41408Z' fill='%23F5963D'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-size: contain;
+	vertical-align: middle;
+}
+p,
+article {
+	@apply font-space-g text-[17.6px] leading-[26px] font-normal tracking-[0.5px];
+}
+
+.caption {
+	@apply font-space-g text-txt-alt text-[15px] font-light;
+}
+hr {
+	@apply text-txt-alt my-3 h-px;
+}
+.nave,
+li {
+	@apply font-space-g list-none text-[24px] tracking-wide;
+}
+
+blockquote {
+	@apply quote text-accent;
+}
+blockquote::before {
+	content: '';
+	position: absolute;
+	top: 1.4rem; /* aligns nicely with text */
+	left: 1rem;
+	width: 3.5rem;
+	aspect-ratio: 1;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='40' viewBox='0 0 52 40' fill='none'%3E%3Cpath d='M4.5893 36.2332C1.60321 33.0615 0 29.5043 0 23.738C0 13.5911 7.12313 4.49653 17.4817 0L20.0706 3.99498C10.402 9.22499 8.51181 16.0118 7.75804 20.2909C9.31487 19.485 11.3529 19.2038 13.3504 19.3893C18.5804 19.8734 22.703 24.167 22.703 29.5043C22.703 32.1954 21.6339 34.7764 19.731 36.6793C17.8281 38.5822 15.2472 39.6512 12.5561 39.6512C9.44532 39.6512 6.47083 38.2307 4.5893 36.2332ZM33.5805 36.2332C30.5944 33.0615 28.9912 29.5043 28.9912 23.738C28.9912 13.5911 36.1143 4.49653 46.4729 0L49.0618 3.99498C39.3932 9.22499 37.503 16.0118 36.7492 20.2909C38.306 19.485 40.3441 19.2038 42.3416 19.3893C47.5716 19.8734 51.6942 24.167 51.6942 29.5043C51.6942 32.1954 50.6251 34.7764 48.7222 36.6793C46.8193 38.5822 44.2384 39.6512 41.5472 39.6512C38.4365 39.6512 35.462 38.2307 33.5805 36.2332Z' fill='%23A89F91'/%3E%3C/svg%3E");
+	background-size: contain;
+	background-repeat: no-repeat;
+	opacity: 0.85;
+	pointer-events: none;
+}
+pre {
+	@apply border-txt-alt m-1 w-[auto] border px-6 py-8;
+}
+code {
+	@apply text-accent font-space-mono;
+}
+a {
+	@apply text-accent font-space-g my-1 inline-block py-5 text-[32px] leading-[26px] tracking-normal;
+}
+a::before {
+	@apply mx-0.5;
+	content: '@';
+}
